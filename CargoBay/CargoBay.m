@@ -711,8 +711,10 @@ NSDictionary * CBPurchaseInfoFromTransactionReceipt(NSData *transactionReceiptDa
                     failure:(void (^)(NSError *error))failure
 {
     NSURLSessionDataTask *dataTask = [self.sessionManager dataTaskWithRequest:urlRequest completionHandler:^(__unused NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (error != nil && failure != nil) {
-            failure(error);
+        if (error != nil) {
+            if (failure != nil) {
+                failure(error);
+            }
             return;
         }
         
@@ -805,8 +807,10 @@ NSDictionary * CBPurchaseInfoFromTransactionReceipt(NSData *transactionReceiptDa
 
     NSURLRequest *request = [manager.requestSerializer requestWithMethod:method URLString:url.absoluteString parameters:parameters error:nil];
     NSURLSessionDataTask *dataTask = [manager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
-        if (error != nil && failure != nil) {
-            failure(error);
+        if (error != nil) {
+            if (failure != nil) {
+                failure(error);
+            }
             return;
         }
         
