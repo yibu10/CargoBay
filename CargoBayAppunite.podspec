@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/mattt/CargoBay'
   s.social_media_url = 'https://twitter.com/mattt'
   s.authors  = { 'Mattt Thompson' => 'm@mattt.me' }
-  s.source   = { :git => 'https://github.com/appunite/CargoBay.git', :tag => s.version }
+  s.source   = { :git => 'https://github.com/yibu10/CargoBay.git', :tag => s.version }
   s.source_files = 'CargoBay'
   s.requires_arc = true
 
@@ -14,5 +14,5 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.8'
   s.frameworks = 'StoreKit', 'Security'
 
-  s.dependency 'AFNetworking', '< 3.0'
+  s.dependency 'AFNetworking'
 end
