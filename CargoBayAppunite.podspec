@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'CargoBayAppunite'
-  s.version  = '2.1.5'
+  s.version  = '2.1.6'
   s.license  = 'MIT'
   s.summary  = 'The Essential StoreKit Companion.'
   s.homepage = 'https://github.com/mattt/CargoBay'
